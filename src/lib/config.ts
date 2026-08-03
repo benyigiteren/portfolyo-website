@@ -43,8 +43,6 @@ export type Project = {
 /** Dil / araç — slug = simpleicons.org slug (bkz. https://simpleicons.org) */
 export type TechItem = { name: string; slug: string };
 
-export type SkillGroup = { group: string; items: string[] };
-
 const NAME = "Yiğit Eren";
 
 export const config = {
@@ -59,7 +57,7 @@ export const config = {
   // Anahtar kelimeler (virgülle ayır)
   keywords: "yigiteren, yigit, yigitdev, yigiteren org, yazılım, yapay zeka, portfolyo, geliştirici, Go, Next.js, vibecoding, backend",
   // Site açıklaması (SEO meta description)
-  description: "Yiğit Eren — 15 yaşında, Go ve Next.js ile vibecoding yapan, yapay zekâ destekli projeler geliştiren yazılım ve girişimcilik portfolyosu.",
+  description: "Yiğit Eren — 15 yaşında, Go ve Next.js ile web ürünleri ve açık kaynak projeler geliştiren yazılımcı.",
 
   // --- SOSYAL MEDYA ---
   social: [
@@ -76,23 +74,11 @@ export const config = {
     { label: "İletişim", href: "/iletisim" },
   ] as NavLink[],
 
-  // --- HERO (anasayfa açılışı) ---
-  hero: {
-    status: "Yeni projelere açık",
-    title: "Yiğit Eren",
-    role: "Geliştirici · Vibecoder · Girişimci",
-    description:
-      "15 yaşında bir lise öğrencisiyim ama kod yazmak benim için bir hobi değil, iş yapış biçimi. Yaklaşık 1.5 yıldır yapay zeka iş akışlarını kullanarak (vibecoding) kendi SaaS ürünlerimi ve açık kaynak projelerimi geliştirip, kendi sunucularımda ayağa kaldırıyorum.",
-    focus: ["Go", "Next.js", "AI / Vibecoding", "Self-Hosting"],
-  },
+  // --- HERO ---
+  hero: { role: "Geliştirici" },
 
   // --- HAKKIMDA ---
   about: {
-    bio: [
-      "Bilişim Teknolojileri bölümünde 9. sınıf öğrencisiyim. Geleneksel öğrenme sınırlarına takılmadan, Go, Next.js, TypeScript ve Appwrite gibi teknolojilerle gerçek dünya problemlerini çözen sistemler inşa ediyorum.",
-      "Benim için geliştirme süreci sadece kod yazmak değil; doğru AI araçlarını kullanarak (vibecoding) hızlıca mimari kurmak, Docker ve Dokploy ile kendi sunucularımda barındırmak demek.",
-      "MenüKolay ve Linklik gibi projelerde mimariyi baştan sona kendim tasarladım. Her gün yeni bir kütüphane, yeni bir hata ve o hatadan çıkan kalıcı bir tecrübeyle ilerliyorum. Az laf, çok iş."
-    ],
     // Kullandığın diller — slug = simpleicons.org slug
     languages: [
       { name: "Go", slug: "go" },
@@ -117,13 +103,6 @@ export const config = {
       { name: "Cloudflare", slug: "cloudflare" },
       { name: "Appwrite", slug: "appwrite" },
     ] as TechItem[],
-    // Genel beceriler (metin olarak)
-    skills: [
-      { group: "Yazılım Geliştirme", items: ["Vibecoding", "Backend (Go)", "Frontend (Next.js)", "Mobil Geliştirme"] },
-      { group: "DevOps & Sunucu", items: ["Docker", "Dokploy", "Cloudflare Tunnels", "Self-hosting"] },
-    ] as SkillGroup[],
-    quote:
-      "Başarılı bir proje sadece iyi koddan ibaret değildir; fikri en hızlı şekilde canlıya alıp, kendi altyapında stabil tutabilmektir.",
   },
 
   // --- PROJELER ---
@@ -219,7 +198,7 @@ export const config = {
       tagline: "Go Tabanlı Google Form Alternatifi",
       year: "2026",
       tags: ["Go", "Open Source"],
-      cover: "https://picsum.photos/seed/goform/1200/800",
+      cover: "https://picsum.photos/seed/googleform/1200/800",
       excerpt:
         "Dışa bağımlılığı ortadan kaldıran, hızlı ve mobil uyumlu açık kaynak form altyapısı.",
       description: [
@@ -253,7 +232,7 @@ export const config = {
       tagline: "Terminalde Hareketli ASCII Sanatı",
       year: "2026",
       tags: ["Go", "Terminal"],
-      cover: "https://picsum.photos/seed/goascii/1200/800",
+      cover: "https://picsum.photos/seed/terminalparrot/1200/800",
       excerpt:
         "Terminal üzerinden eğlenceli ve hareketli ASCII animasyonları izlemenizi sağlayan ascii.live alternatifi.",
       description: [
@@ -321,39 +300,6 @@ export const config = {
 
   // --- SAYFA METİNLERİ ---
   pages: {
-    home: {
-      metadata: {
-        description:
-          "Yiğit Eren — Go ve Next.js ile vibecoding yapan, yapay zekâ destekli projeler geliştiren yazılım ve girişimcilik portfolyosu.",
-      },
-      featuredLabel: "Öne çıkan",
-      featuredLabelAccent: "projeler",
-      aboutTeaserLabel: "Hakkımda",
-      aboutTeaserTitle: "15 yaşında, ",
-      aboutTeaserTitleAccent: "meraklı",
-      aboutTeaserTitleSuffix: " bir öğrenci.",
-      aboutFullStory: "Hikâyemin tamamı",
-      contactLabel: "İletişim",
-      contactTitle: "Bir fikir mi var? ",
-      contactTitleAccent: "Konuşalım.",
-      contactDescription:
-        "Hızlı yanıt için Instagram'dan yaz, ya da bir mail bırak. Hangisini seçersen seç, aynı kişiye ulaşırsın.",
-    },
-    about: {
-      metadata: {
-        description:
-          "Yiğit Eren — yapay zekâ, kodlama ve sosyal medya girişimciliği üzerine çalışan 15 yaşındaki lise öğrencisi.",
-      },
-      label: "Hakkımda",
-      title: "Merakla başlayan, ",
-      titleSuffix: "kodla büyüyen bir yolculuk.",
-      languagesHeading: "Diller",
-      languagesCountSuffix: "teknoloji",
-      toolsHeading: "Araçlar",
-      toolsCountSuffix: "araç",
-      skillsHeading: "Yetenekler",
-      ctaTitle: "Birlikte bir şeyler üretelim.",
-    },
     projects: {
       metadata: {
         description:
@@ -398,5 +344,3 @@ export const config = {
 export const featuredProjects = config.projects.filter((p) => p.featured);
 export const projects = config.projects;
 export const site = config;
-export const aboutBio = config.about.bio;
-export const skills = config.about.skills;

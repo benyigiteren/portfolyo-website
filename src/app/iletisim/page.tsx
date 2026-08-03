@@ -48,7 +48,7 @@ export default function IletisimPage() {
           <Reveal delay={0.24}>
             <a
               href={`mailto:${site.email}`}
-              className="group relative flex h-full flex-col justify-between overflow-hidden rounded-[1.6rem] border border-white/8 bg-white/[0.02] p-7 transition-all duration-700 ease-[cubic-bezier(0.32,0.72,0,1)] hover:-translate-y-1 hover:border-accent/30 hover:shadow-[0_40px_90px_-50px_rgba(139,92,246,0.55)] sm:p-8"
+              className="group relative flex h-full flex-col justify-between overflow-hidden rounded-[1.6rem] border border-white/8 bg-white/[0.02] p-7 transition-all duration-700 ease-[cubic-bezier(0.32,0.72,0,1)] hover:-translate-y-1 hover:border-accent/30 hover:shadow-[0_40px_90px_-50px_rgba(223,38,54,0.55)] sm:p-8"
             >
               <div className="flex items-start justify-between">
                 <span className="grid h-12 w-12 place-items-center rounded-full border border-white/10 bg-accent/10 text-accent">
@@ -78,7 +78,7 @@ export default function IletisimPage() {
               href={insta.href}
               target="_blank"
               rel="noreferrer"
-              className="group relative flex h-full flex-col justify-between overflow-hidden rounded-[1.6rem] border border-white/8 bg-white/[0.02] p-7 transition-all duration-700 ease-[cubic-bezier(0.32,0.72,0,1)] hover:-translate-y-1 hover:border-accent-2/30 hover:shadow-[0_40px_90px_-50px_rgba(232,121,249,0.45)] sm:p-8"
+              className="group relative flex h-full flex-col justify-between overflow-hidden rounded-[1.6rem] border border-white/8 bg-white/[0.02] p-7 transition-all duration-700 ease-[cubic-bezier(0.32,0.72,0,1)] hover:-translate-y-1 hover:border-accent-2/30 hover:shadow-[0_40px_90px_-50px_rgba(255,91,102,0.45)] sm:p-8"
             >
               <div className="flex items-start justify-between">
                 <span className="grid h-12 w-12 place-items-center rounded-full border border-white/10 bg-accent-2/10 text-accent-2">

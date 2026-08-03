@@ -1,174 +1,103 @@
 import type { Metadata } from "next";
-import { ArrowRight } from "@/components/icons"
-import { config, aboutBio, skills } from "@/lib/config"
+import Link from "next/link";
+import { ArrowRight, ArrowUpRight } from "@/components/icons";
+import { config } from "@/lib/config";
 import { Reveal } from "@/components/Reveal";
-import { TechIcon } from "@/components/TechIcon";
-import { SocialLinks } from "@/components/SocialLinks";
+import { TechIconInline } from "@/components/TechIcon";
 import { MagneticButton } from "@/components/MagneticButton";
-
-const about = config.pages.about;
 
 export const metadata: Metadata = {
   title: "Hakkımda",
-  description: about.metadata.description,
+  description: "Yiğit Eren — Go ve Next.js ile ürün geliştiren yazılımcı.",
 };
 
 export default function HakkimdaPage() {
+  const primary = config.about.languages.slice(0, 4);
+  const others = config.about.languages.slice(4);
+
   return (
     <>
-      {/* header */}
-      <section className="relative overflow-hidden pt-32 sm:pt-40">
-        <div className="tech-grid pointer-events-none absolute inset-0 opacity-20" aria-hidden />
-        <div className="relative z-10 mx-auto max-w-7xl px-5 sm:px-8">
-          <Reveal>
-            <p className="font-mono text-[11px] uppercase tracking-[0.22em] text-faint">
-              {about.label}
-            </p>
-          </Reveal>
-          <Reveal delay={0.08}>
-            <h1 className="font-display mt-5 max-w-4xl text-ink text-5xl font-semibold leading-[0.95] tracking-tighter sm:text-6xl lg:text-7xl">
-              {about.title}<br className="hidden sm:block" />
-              {about.titleSuffix}
-            </h1>
-          </Reveal>
-        </div>
-      </section>
-
-      {/* bio */}
-      <section className="relative z-10 mx-auto max-w-2xl px-5 py-24 sm:px-8 sm:py-32">
-        <div className="space-y-7">
-          {aboutBio.map((para, i) => (
-            <Reveal key={i} delay={0.06 * i}>
-              <p
-                className={
-                  i === 0
-                    ? "text-xl leading-relaxed text-ink sm:text-2xl"
-                    : "text-lg leading-relaxed text-mute"
-                }
-              >
-                {para}
-              </p>
+      <section className="relative overflow-hidden px-5 pb-24 pt-36 sm:px-8 sm:pb-32 sm:pt-44 lg:px-10">
+        <div className="tech-grid pointer-events-none absolute inset-0 opacity-16" aria-hidden />
+        <div className="pointer-events-none absolute -right-48 top-0 h-96 w-96 rounded-full bg-accent/8 blur-[130px]" aria-hidden />
+        <div className="relative mx-auto max-w-[86rem]">
+          <Reveal><p className="section-kicker">Hakkımda</p></Reveal>
+          <div className="mt-8 grid gap-10 lg:grid-cols-[1.15fr_.85fr] lg:items-end lg:gap-20">
+            <Reveal delay={.05}>
+              <h1 className="text-[clamp(4.5rem,10vw,9rem)] font-semibold leading-[.82] tracking-[-.075em] text-ink">Ben Yiğit.</h1>
             </Reveal>
-          ))}
-        </div>
-      </section>
 
-      {/* LANGUAGES — real SVG logos */}
-      <section className="relative z-10 mx-auto max-w-7xl px-5 sm:px-8">
-        <Reveal>
-          <div className="flex items-baseline justify-between">
-            <h2 className="font-display text-3xl font-semibold tracking-tighter text-ink sm:text-4xl">
-              {about.languagesHeading}
-            </h2>
-            <p className="font-mono text-[11px] uppercase tracking-[0.2em] text-faint">
-              {config.about.languages.length} {about.languagesCountSuffix}
-            </p>
-          </div>
-        </Reveal>
-        <div className="mt-10 flex flex-wrap gap-5 sm:gap-6">
-          {config.about.languages.map((item, i) => (
-            <Reveal key={item.slug} delay={i * 0.06}>
-              <TechIcon item={item} size={36} />
-            </Reveal>
-          ))}
-        </div>
-      </section>
-
-      {/* TOOLS — real SVG logos */}
-      <section className="relative z-10 mx-auto max-w-7xl px-5 py-24 sm:px-8 sm:py-28">
-        <Reveal>
-          <div className="flex items-baseline justify-between">
-            <h2 className="font-display text-3xl font-semibold tracking-tighter text-ink sm:text-4xl">
-              {about.toolsHeading}
-            </h2>
-            <p className="font-mono text-[11px] uppercase tracking-[0.2em] text-faint">
-              {config.about.tools.length} {about.toolsCountSuffix}
-            </p>
-          </div>
-        </Reveal>
-        <div className="mt-10 flex flex-wrap gap-5 sm:gap-6">
-          {config.about.tools.map((item, i) => (
-            <Reveal key={item.slug} delay={i * 0.06}>
-              <TechIcon item={item} size={36} />
-            </Reveal>
-          ))}
-        </div>
-      </section>
-
-      {/* SKILLS — text grid */}
-      <section className="relative z-10 mx-auto max-w-7xl px-5 pb-24 sm:px-8 sm:pb-28">
-        <Reveal>
-          <h2 className="font-display text-3xl font-semibold tracking-tighter text-ink sm:text-4xl">
-            {about.skillsHeading}
-          </h2>
-        </Reveal>
-        <div className="mt-10 grid gap-px overflow-hidden rounded-[1.4rem] border border-white/8 bg-white/[0.02] sm:grid-cols-2">
-          {skills.map((group, gi) => (
-            <Reveal key={group.group} delay={gi * 0.08} className="bg-surface/40">
-              <div className="h-full p-6 sm:p-8">
-                <p className="font-mono text-[11px] uppercase tracking-[0.22em] text-accent">
-                  {group.group}
-                </p>
-                <ul className="mt-5 space-y-3">
-                  {group.items.map((item) => (
-                    <li
-                      key={item}
-                      className="flex items-center gap-3 text-sm text-ink/85"
-                    >
-                      <span className="h-1 w-1 rounded-full bg-accent/50" />
-                      {item}
-                    </li>
-                  ))}
-                </ul>
+            <Reveal delay={.1}>
+              <div className="border-t border-accent/65 pt-6">
+                <p className="max-w-xl text-lg leading-relaxed text-ink/90 sm:text-xl">15 yaşındayım. Go ve Next.js ile web uygulamaları geliştiriyor, projelerimi kendi sunucularımda çalıştırıyorum.</p>
+                <dl className="mt-9 grid grid-cols-2 gap-x-6 gap-y-7 text-sm sm:grid-cols-3">
+                  <div><dt className="text-[10px] uppercase tracking-[.18em] text-faint">Konum</dt><dd className="mt-2 text-ink">Bursa</dd></div>
+                  <div><dt className="text-[10px] uppercase tracking-[.18em] text-faint">Odak</dt><dd className="mt-2 text-ink">Web & Backend</dd></div>
+                  <div><dt className="text-[10px] uppercase tracking-[.18em] text-faint">Altyapı</dt><dd className="mt-2 text-ink">Self-hosted</dd></div>
+                </dl>
               </div>
             </Reveal>
-          ))}
+          </div>
         </div>
       </section>
 
-      {/* quote */}
-      <section className="relative z-10 overflow-hidden border-y border-white/8">
-        <div className="tech-grid pointer-events-none absolute inset-0 opacity-15" aria-hidden />
-        <div className="relative z-10 mx-auto max-w-3xl px-5 py-24 text-center sm:px-8 sm:py-32">
+      <section className="border-y border-white/8 bg-abyss py-24 sm:py-32">
+        <div className="mx-auto max-w-[86rem] px-5 sm:px-8 lg:px-10">
           <Reveal>
-            <blockquote className="text-balance text-2xl font-medium leading-[1.3] tracking-tight text-ink sm:text-3xl lg:text-4xl">
-              &ldquo;{config.about.quote}&rdquo;
-            </blockquote>
+            <p className="section-kicker">Teknolojiler</p>
+            <div className="mt-5 flex flex-col gap-5 sm:flex-row sm:items-end sm:justify-between">
+              <h2 className="text-4xl font-semibold tracking-[-.05em] text-ink sm:text-6xl">Kullandıklarım.</h2>
+              <p className="text-sm text-mute">Günlük kullandığım diller ve araçlar.</p>
+            </div>
+          </Reveal>
+
+          <div className="mt-10 grid gap-5 lg:grid-cols-[.8fr_1.2fr]">
+            <Reveal>
+              <div className="overflow-hidden rounded-[1.5rem] border border-white/8 bg-surface/60">
+                {primary.map((item, index) => (
+                  <div key={item.name} className="flex items-center justify-between border-b border-white/8 p-5 last:border-0 sm:p-6">
+                    <div className="flex items-center gap-4"><span className="grid h-11 w-11 place-items-center rounded-xl bg-white/[.04]"><TechIconInline item={item} size={25} /></span><span className="text-lg font-medium text-ink">{item.name}</span></div>
+                    <span className="text-[10px] font-semibold tracking-[.18em] text-faint">0{index + 1}</span>
+                  </div>
+                ))}
+              </div>
+            </Reveal>
+
+            <div className="grid grid-cols-2 gap-3 sm:grid-cols-3">
+              {others.map((item, index) => (
+                <Reveal key={`${item.name}-${index}`} delay={index * .035}>
+                  <div className="flex h-full min-h-28 flex-col justify-between rounded-2xl border border-white/8 bg-white/[.025] p-4 transition-colors hover:border-accent/30 hover:bg-accent/[.04]">
+                    <TechIconInline item={item} size={23} />
+                    <span className="mt-5 text-sm font-medium text-ink">{item.name}</span>
+                  </div>
+                </Reveal>
+              ))}
+            </div>
+          </div>
+
+          <Reveal delay={.08}>
+            <div className="mt-12 border-t border-white/8 pt-8">
+              <p className="text-[10px] font-semibold uppercase tracking-[.2em] text-faint">Araçlar</p>
+              <div className="mt-5 grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4">
+                {config.about.tools.map((item) => (
+                  <div key={item.slug} className="flex min-w-0 items-center gap-3 rounded-2xl border border-white/8 bg-white/[.025] px-4 py-3.5">
+                    <TechIconInline item={item} size={20} /><span className="truncate text-sm text-mute">{item.name}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
           </Reveal>
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="relative z-10 mx-auto max-w-5xl px-5 py-24 text-center sm:px-8 sm:py-32">
+      <section className="mx-auto max-w-[86rem] px-5 py-24 sm:px-8 sm:py-28 lg:px-10">
         <Reveal>
-          <h2 className="font-display text-3xl font-semibold tracking-tighter text-ink sm:text-4xl">
-            {about.ctaTitle}
-          </h2>
-        </Reveal>
-        <Reveal delay={0.1}>
-          <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
-            <MagneticButton
-              href="/projeler"
-              className="bg-ink text-void hover:shadow-[0_24px_60px_-24px_rgba(237,234,244,0.45)]"
-              ariaLabel={config.ui.aria.viewProjects}
-            >
-              {config.ui.buttons.viewProjects}
-              <span className="grid h-7 w-7 place-items-center rounded-full bg-void/10 transition-transform duration-500 group-hover:translate-x-0.5 group-hover:-translate-y-0.5">
-                <ArrowRight size={15} weight="bold" />
-              </span>
-            </MagneticButton>
-            <MagneticButton
-              href="/iletisim"
-              className="border border-white/12 bg-transparent text-ink hover:border-accent/40 hover:bg-white/[0.03]"
-              ariaLabel={config.ui.aria.contact}
-            >
-              {config.ui.buttons.contact}
-            </MagneticButton>
-          </div>
-        </Reveal>
-        <Reveal delay={0.16}>
-          <div className="mt-12 flex justify-center">
-            <SocialLinks size={20} withLabels />
+          <div className="flex flex-col gap-8 border-t border-white/10 pt-10 lg:flex-row lg:items-end lg:justify-between">
+            <div><p className="section-kicker">Devam et</p><h2 className="mt-5 text-4xl font-semibold tracking-[-.05em] text-ink sm:text-5xl">Projelerime göz at.</h2></div>
+            <div className="flex flex-wrap gap-3">
+              <Link href="/projeler" className="group inline-flex items-center gap-2 rounded-full border border-white/12 px-5 py-3 text-sm font-medium text-ink transition-colors hover:border-accent hover:text-accent">Projeler <ArrowRight size={15} className="transition-transform group-hover:translate-x-1" /></Link>
+              <MagneticButton href={`mailto:${config.email}`} className="bg-accent text-white hover:bg-accent-2" ariaLabel={config.ui.aria.sendMail}>İletişim<ArrowUpRight size={16} /></MagneticButton>
+            </div>
           </div>
         </Reveal>
       </section>

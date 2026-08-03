@@ -61,7 +61,7 @@ export function SocialLinks({
               rel={isMail ? undefined : "noreferrer"}
               aria-label={s.label}
               className={cn(
-                "group relative flex items-center gap-2.5 rounded-full border border-white/8 bg-white/[0.03] px-3.5 py-2.5 text-mute backdrop-blur-md transition-all duration-500 ease-[cubic-bezier(0.32,0.72,0,1)] hover:-translate-y-0.5 hover:border-accent/40 hover:text-ink hover:shadow-[0_18px_50px_-24px_rgba(139,92,246,0.6)]",
+                "group relative flex items-center gap-2.5 rounded-full border border-white/8 bg-white/[0.03] px-3.5 py-2.5 text-mute backdrop-blur-md transition-all duration-500 ease-[cubic-bezier(0.32,0.72,0,1)] hover:-translate-y-0.5 hover:border-accent/40 hover:text-ink hover:shadow-[0_18px_50px_-24px_rgba(223,38,54,0.6)]",
                 withLabels && "pr-4",
               )}
             >

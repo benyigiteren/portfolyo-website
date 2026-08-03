@@ -25,6 +25,7 @@ export {
   TelegramLogo,
   TwitchLogo,
   Globe,
+  Eye,
 } from "@phosphor-icons/react";
 
 export type { Icon } from "@phosphor-icons/react";
