@@ -1,3 +1,5 @@
+![Yiğit Eren portfolyo sitesi](./public/assets/portfolio-preview.png)
+
 # portfolyo-website
 
 Açık kaynak kişisel portfolyo sitesi. [Next.js 15](https://nextjs.org) + [React 19](https://react.dev) + [Tailwind CSS v4](https://tailwindcss.com) + [Motion](https://motion.dev) ile yazıldı. Editorial, koyu temalı, animasyonlu, tek dosyadan yönetilen bir yapı.
