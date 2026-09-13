@@ -137,25 +137,26 @@
   },
   "projects": [
     {
-      "slug": "bigpocket",
-      "title": "BigPocket",
-      "tagline": "Telefonunuzu Donanıma Dönüştürün",
+      "slug": "menukolay",
+      "title": "MenüKolay",
+      "tagline": "Yapay Zeka Destekli Akıllı QR Menü",
       "year": "2026",
       "tags": [
-        "Android",
-        "Windows",
-        "Utility"
+        "Next.js",
+        "AI",
+        "SaaS",
+        "Kapalı Kaynak"
       ],
-      "cover": "https://github.com/benyigiteren/bigpocket/raw/main/bigpocket.png",
-      "excerpt": "Android cihazınızı bilgisayarınız için mikrofon, kamera, streamdeck veya fareye dönüştüren çok yönlü araç.",
+      "cover": "https://bin.yigiteren.org/yigit/menukolay.png",
+      "excerpt": "Mevzuata tam uyumlu, doğal dil işleme ile yönetilebilen profesyonel dijital QR menü platformu.",
       "description": [
-        "Telefonun donanım potansiyelini bilgisayara taşıyan kapsamlı bir köprü uygulaması. Android cihazınızı Windows bilgisayarınızda anında web kamerası, mikrofon, StreamDeck veya klavye/mouse olarak kullanmanızı sağlıyor.",
-        "Ekstra olarak sunduğu hızlı dosya aktarımı sayesinde cihazlar arası etkileşimi tek bir uygulamada topluyor. Şimdilik Windows ve Android ekosistemini destekliyor."
+        "MenüKolay, sıradan bir QR menünün ötesine geçerek işletmelere yapay zeka destekli bir yönetim paneli sunuyor. Menüyü doğal dil komutlarıyla (örneğin 'Tüm kahvelere %10 zam yap') düzenleme imkanı sağlıyor.",
+        "Mevzuata uygun kalori ve alerjen bilgisi ekleme özelliklerinin yanı sıra, istenildiğinde tek tıkla fiziksel baskı için A4 formatında menü PDF'i oluşturabiliyor. Canlıda aktif olarak yüzlerce müşteriye hizmet veren kapalı kaynaklı bir SaaS projesi."
       ],
       "featured": true,
       "status": "shipped",
       "links": {
-        "source": "https://github.com/benyigiteren/bigpocket"
+        "live": "https://menukolay.tr"
       }
     },
     {
@@ -178,6 +179,28 @@
       "status": "shipped",
       "links": {
         "source": "https://github.com/benyigiteren/linklik"
+      }
+    },
+    {
+      "slug": "bigpocket",
+      "title": "BigPocket",
+      "tagline": "Telefonunuzu Donanıma Dönüştürün",
+      "year": "2026",
+      "tags": [
+        "Android",
+        "Windows",
+        "Utility"
+      ],
+      "cover": "https://github.com/benyigiteren/bigpocket/raw/main/bigpocket.png",
+      "excerpt": "Android cihazınızı bilgisayarınız için mikrofon, kamera, streamdeck veya fareye dönüştüren çok yönlü araç.",
+      "description": [
+        "Telefonun donanım potansiyelini bilgisayara taşıyan kapsamlı bir köprü uygulaması. Android cihazınızı Windows bilgisayarınızda anında web kamerası, mikrofon, StreamDeck veya klavye/mouse olarak kullanmanızı sağlıyor.",
+        "Ekstra olarak sunduğu hızlı dosya aktarımı sayesinde cihazlar arası etkileşimi tek bir uygulamada topluyor. Şimdilik Windows ve Android ekosistemini destekliyor."
+      ],
+      "featured": true,
+      "status": "shipped",
+      "links": {
+        "source": "https://github.com/benyigiteren/bigpocket"
       }
     },
     {
@@ -216,54 +239,10 @@
         "Linktree gibi servislere alternatif olarak geliştirdiğim, native Go mimarisine sahip açık kaynak projem.",
         "Arka planda özel bir router kurulumu var. Profili kendi sunucunda barındırıp (self-hosted) tam kontrol sahibi olmak isteyenler için tasarlandı."
       ],
-      "featured": true,
+      "featured": false,
       "status": "shipped",
       "links": {
         "source": "https://github.com/benyigiteren/gotree"
-      }
-    },
-    {
-      "slug": "menukolay",
-      "title": "MenüKolay",
-      "tagline": "Yapay Zeka Destekli Akıllı QR Menü",
-      "year": "2026",
-      "tags": [
-        "Next.js",
-        "AI",
-        "SaaS",
-        "Kapalı Kaynak"
-      ],
-      "cover": "https://bin.yigiteren.org/yigit/menukolay.png",
-      "excerpt": "Mevzuata tam uyumlu, doğal dil işleme ile yönetilebilen profesyonel dijital QR menü platformu.",
-      "description": [
-        "MenüKolay, sıradan bir QR menünün ötesine geçerek işletmelere yapay zeka destekli bir yönetim paneli sunuyor. Menüyü doğal dil komutlarıyla (örneğin 'Tüm kahvelere %10 zam yap') düzenleme imkanı sağlıyor.",
-        "Mevzuata uygun kalori ve alerjen bilgisi ekleme özelliklerinin yanı sıra, istenildiğinde tek tıkla fiziksel baskı için A4 formatında menü PDF'i oluşturabiliyor. Canlıda aktif olarak yüzlerce müşteriye hizmet veren kapalı kaynaklı bir SaaS projesi."
-      ],
-      "featured": false,
-      "status": "shipped",
-      "links": {
-        "live": "https://menukolay.tr"
-      }
-    },
-    {
-      "slug": "uptimego",
-      "title": "UptimeGo",
-      "tagline": "Go Tabanlı Uptime Monitörü",
-      "year": "2026",
-      "tags": [
-        "Go",
-        "Monitoring"
-      ],
-      "cover": "https://github.com/benyigiteren/uptimego/raw/main/uptimegogithub.png",
-      "excerpt": "Kendi servis ve projelerinin ayakta olup olmadığını izlemeni sağlayan hafif sunucu takip aracı.",
-      "description": [
-        "MenüKolay ve diğer servislerimin uptime durumunu anlık takip etmek için geliştirdiğim Go tabanlı izleme (monitoring) uygulaması.",
-        "Sürekli arka planda çalışarak sitelerin durumunu kontrol ediyor ve sistem çökmelerinde hızlı aksiyon almanı sağlıyor."
-      ],
-      "featured": false,
-      "status": "shipped",
-      "links": {
-        "source": "https://github.com/benyigiteren/uptimego"
       }
     },
     {
@@ -285,6 +264,27 @@
       "status": "shipped",
       "links": {
         "source": "https://github.com/benyigiteren/goform"
+      }
+    },
+    {
+      "slug": "uptimego",
+      "title": "UptimeGo",
+      "tagline": "Go Tabanlı Uptime Monitörü",
+      "year": "2026",
+      "tags": [
+        "Go",
+        "Monitoring"
+      ],
+      "cover": "https://github.com/benyigiteren/uptimego/raw/main/uptimegogithub.png",
+      "excerpt": "Kendi servis ve projelerinin ayakta olup olmadığını izlemeni sağlayan hafif sunucu takip aracı.",
+      "description": [
+        "MenüKolay ve diğer servislerimin uptime durumunu anlık takip etmek için geliştirdiğim Go tabanlı izleme (monitoring) uygulaması.",
+        "Sürekli arka planda çalışarak sitelerin durumunu kontrol ediyor ve sistem çökmelerinde hızlı aksiyon almanı sağlıyor."
+      ],
+      "featured": false,
+      "status": "shipped",
+      "links": {
+        "source": "https://github.com/benyigiteren/uptimego"
       }
     },
     {
@@ -311,7 +311,7 @@
   ],
   "footer": {
     "credit": "© 2026 Yiğit Eren",
-    "tagline": "Merhaba ben Yiğit :D",
+    "tagline": "Vibecoding ile SaaS ürünleri ve açık kaynak araçlar geliştiren, kendi sunucusunda projeler koşturan 15 yaşında bir geliştirici.",
     "repoPrompt": "Websitemi beğendin mi?",
     "repoLink": "https://github.com/benyigiteren/portfolyo-website",
     "repoLinkLabel": "Al Github Reposu"
