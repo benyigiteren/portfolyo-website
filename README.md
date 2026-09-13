@@ -8,7 +8,8 @@ Açık kaynak kişisel portfolyo sitesi. [Next.js 15](https://nextjs.org) + [Rea
 
 ## Özellikler
 
-- **Tek dosyadan yönetim** — tüm metinler, projeler, sosyal linkler, navigasyon `src/lib/config.ts`'te. Kodu kurcalamadan içeriği düzenleyebilirsin.
+- **Yiğit Eren Studio (Yerel Görsel CMS)** — WordPress / Elementor benzeri canlı görsel editör, sürükle-bırak proje sıralama, JSON içe/dışa aktarma ve tek tıkla GitHub'a pushlayıp canlıya alma (`Studio-Baslat.bat` veya `/studio`).
+- **Tek dosyadan yönetim** — tüm metinler, projeler, sosyal linkler, navigasyon `src/data/config.json` ve `src/lib/config.ts`'te. Kodu kurcalamadan içeriği düzenleyebilirsin.
 - **Editorial koyu tema** — violet accent, tech-grid arka plan, grain overlay, monospace etiketler.
 - **Hareketli Hero** — Motion ile split-text animasyonu, magnetic butonlar, scroll parallax.
 - **Tech logo marquee** — [simpleicons.org](https://simpleicons.org) CDN'inden gerçek marka logoları, sonsuz döngü.
@@ -45,13 +46,26 @@ npm install
 
 # dev sunucusu
 npm run dev
-# http://localhost:3000
+# http://localhost:3030
 
 # production build
 npm run build && npm start
 ```
 
 Node 18.18+ önerilir.
+
+## 🎨 Yiğit Eren Studio (Görsel İçerik Editörü)
+
+Siteyi kod yazmadan, tarayıcıda görsel olarak düzenlemek ve tek tıkla GitHub'a gönderip canlıya almak için:
+
+- **Windows Tek Tık**: `Studio-Baslat.bat` dosyasına çift tıklayın. Otomatik olarak Next.js'i kontrol eder ve masaüstü uygulama penceresinde Studio'yu açar.
+- **Terminalden**: `npm run studio` çalıştırın ve `http://localhost:3030/studio` adresine gidin.
+
+### Studio Yetenekleri
+1. **Canlı Tuval (Tıkla & Yaz)**: Hero başlıklarına, biyografiye veya projelere tıklayarak anında sitede değişiklik yapma.
+2. **Sürükle & Bırak Proje Sıralama**: Projelerin sırasını değiştirme, öne çıkanları seçme, yeni proje ekleme ve silme.
+3. **JSON İçe / Dışa Aktar**: Tek tıkla tüm site ayarlarını `.json` olarak yedekleme veya geri yükleme.
+4. **Tek Tıkla GitHub'a Push**: Değişiklikleri kaydedip doğrudan `git push` ile GitHub'a yollama (Vercel/Cloudflare otomatik yayına alır).
 
 ## Kişiselleştirme
 

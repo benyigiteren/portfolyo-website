@@ -3,9 +3,10 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev -p 3030",
+    "studio": "next dev -p 3030",
     "build": "next build",
-    "start": "next start"
+    "start": "next start -p 3030"
   },
   "dependencies": {
     "next": "^15",

@@ -18,26 +18,28 @@ export function Hero() {
       <div className="relative z-10 mx-auto grid w-full max-w-[86rem] items-center gap-12 lg:grid-cols-[1fr_.72fr] lg:gap-16">
         <div>
           <motion.div initial={reduce ? false : { opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: .6 }} className="flex flex-wrap items-center gap-x-5 gap-y-2">
-            <p className="text-xs font-semibold uppercase tracking-[.2em] text-accent">15 yaşında geliştirici · Bursa</p>
+            <p className="text-xs font-semibold uppercase tracking-[.2em] text-accent">
+              {config.hero.badge ?? "15 yaşında geliştirici · Bursa"}
+            </p>
             <ViewCounter />
           </motion.div>
 
-          <h1 className="mt-6 max-w-4xl text-[clamp(4.2rem,10.5vw,9rem)] font-semibold leading-[.84] tracking-[-.075em] text-ink" aria-label="Merhaba, Ben Yiğit.">
+          <h1 className="mt-6 max-w-4xl text-[clamp(4.2rem,10.5vw,9rem)] font-semibold leading-[.84] tracking-[-.075em] text-ink" aria-label={`${config.hero.titlePrefix ?? "Merhaba,"} ${config.hero.titleHighlight ?? `Ben ${config.name}.`}`}>
             <span className="block overflow-hidden pb-[.08em]">
               <motion.span className="block" initial={reduce ? false : { y: "110%" }} animate={{ y: 0 }} transition={{ duration: .85, delay: .08, ease: [0.16, 1, 0.3, 1] }}>
-                Merhaba,
+                {config.hero.titlePrefix ?? "Merhaba,"}
               </motion.span>
             </span>
             <span className="block overflow-hidden pb-[.08em]">
               <motion.span className="block text-accent" initial={reduce ? false : { y: "110%" }} animate={{ y: 0 }} transition={{ duration: .85, delay: .16, ease: [0.16, 1, 0.3, 1] }}>
-                Ben Yiğit.
+                {config.hero.titleHighlight ?? `Ben ${config.name}.`}
               </motion.span>
             </span>
           </h1>
 
           <motion.div initial={reduce ? false : { opacity: 0, y: 18 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: .7, delay: .36 }} className="mt-7 max-w-2xl border-l border-accent/60 pl-5">
             <p className="text-base leading-relaxed text-mute sm:text-lg">
-              Go ve Next.js ile web ürünleri geliştiriyorum. Projelerimi kendi sunucularımda çalıştırıyorum.
+              {config.hero.description ?? "Go ve Next.js ile web ürünleri geliştiriyorum. Projelerimi kendi sunucularımda çalıştırıyorum."}
             </p>
           </motion.div>
 

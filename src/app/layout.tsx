@@ -9,8 +9,7 @@ const display = Outfit({
   display: "swap",
 });
 import "./globals.css";
-import { Navbar } from "@/components/Navbar";
-import { Footer } from "@/components/Footer";
+import { SiteShell } from "@/components/SiteShell";
 
 export const metadata: Metadata = {
   metadataBase: new URL(config.url),
@@ -50,9 +49,7 @@ export default function RootLayout({
     >
       <body className="font-sans antialiased selection:text-white">
         <div className="grain-overlay" aria-hidden />
-        <Navbar />
-        <main className="relative z-10">{children}</main>
-        <Footer />
+        <SiteShell>{children}</SiteShell>
       </body>
     </html>
   );
