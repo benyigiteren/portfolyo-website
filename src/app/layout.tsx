@@ -1,13 +1,6 @@
 import type { Metadata, Viewport } from "next";
-import { Outfit } from "next/font/google";
 import { config } from "@/lib/config";
 
-const display = Outfit({
-  subsets: ["latin", "latin-ext"],
-  weight: ["300", "400", "500", "600", "700"],
-  variable: "--font-outfit",
-  display: "swap",
-});
 import "./globals.css";
 import { SiteShell } from "@/components/SiteShell";
 
@@ -45,7 +38,6 @@ export default function RootLayout({
   return (
     <html
       lang="tr"
-      className={display.variable}
     >
       <body className="font-sans antialiased selection:text-white">
         <div className="grain-overlay" aria-hidden />
